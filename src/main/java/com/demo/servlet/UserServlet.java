@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public class UserServlet extends HttpServlet {
 
-    /**
+    /*
      * 处理Post请求
      */
     @Override
@@ -79,11 +79,6 @@ public class UserServlet extends HttpServlet {
 
     /**
      * 处理Get请求
-     *
-     * @param request
-     * @param response
-     * @throws ServletException
-     * @throws IOException
      */
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -92,9 +87,6 @@ public class UserServlet extends HttpServlet {
 
     /**
      * 根据参数，查询出条例条件的记录集合，最后将数据返回给调用处或者将数据集合设置到session域里，再跳转到对应的列表页面
-     *
-     * @param request
-     * @param response
      */
     private void redirectList(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //查询列和关键字

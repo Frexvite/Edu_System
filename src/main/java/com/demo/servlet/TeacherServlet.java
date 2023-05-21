@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 教师模块的Servlet控制层，负责接收页面传过来的请求参数，根据action参数的值来确定页面要执行的具体操作<br>
+ * 教师模块的Servlet控制层，负责接收页面传过来的请求参数，根据action参数的值来确定页面要执行的具体操作
  * 而后再调用TeacherService业务层的方法来处理具体的业务，最后将处理完成的结果返回或跳转至相应页面
  */
 public class TeacherServlet extends HttpServlet {
@@ -77,22 +77,14 @@ public class TeacherServlet extends HttpServlet {
 
     /**
      * 处理Get请求
-     *
-     * @param request
-     * @param response
-     * @throws ServletException
-     * @throws IOException
      */
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);//Get请求和Post请求的处理是一样的，所以把request、response转交给Post方法就好
     }
 
-    /**
+    /*
      * 根据参数，查询出条例条件的记录集合，最后将数据返回给调用处或者将数据集合设置到session域里，再跳转到对应的列表页面
-     *
-     * @param request
-     * @param response
      */
     private void redirectList(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //查询列和关键字
